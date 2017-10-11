@@ -1,0 +1,16 @@
+{
+  "name": "themebuilder",
+  "version": "0.1.0",
+  "description": "A Bootstrap theme builder.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "desktop",
+    "bootstrap",
+    "ui"
+  ],
+  "author": "Andy Bettisworth <andy@accreu.com>",
+  "license": "MIT"
+}

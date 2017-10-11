@@ -4,7 +4,7 @@
   "description": "A Bootstrap theme builder.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron index.js"
   },
   "keywords": [
     "desktop",

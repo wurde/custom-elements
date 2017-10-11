@@ -12,9 +12,13 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+* 2 minor enhancements:
+
+  * Include the 'bootstrap' dependency
+  * Include the 'turbolinks' dependency
+
 ## YYYY-MM-DD, Version 0.1.0
 
 * 1 minor enhancement:
 
   * Initialized project
-

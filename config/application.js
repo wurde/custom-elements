@@ -39,7 +39,7 @@ app.use('/assets', express.static(root + '/node_modules/turbolinks/dist'))
 // Routes
 //
 app.get("/", function(req, res) {
-  res.status(200).send("Hello, friend!")
+  res.render("editor")
 })
 
 if (!module.parent) {

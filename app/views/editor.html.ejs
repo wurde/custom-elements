@@ -150,7 +150,6 @@
   $(document).ready(() => {
     $('#edit-link').on('click', (e) => {
       e.preventDefault()
-      console.log("Click edit")
       $('#components').hide()
       $('#quick-nav').hide()
       $('#edit-link').hide()
@@ -163,7 +162,6 @@
 
     $('#back-link').on('click', (e) => {
       e.preventDefault()
-      console.log("Click back")
       $('#components').show()
       $('#quick-nav').show()
       $('#edit-link').show()
@@ -180,9 +178,11 @@
 
     $('#update-btn').on('click', (e) => {
       e.preventDefault()
-      console.log("Updating tmp/bootstrap/dist/scss/_custom.scss")
-      console.log("Running npm dist")
-      console.log("Showing components")
+      let custom = $('#editor-textarea').val()
+      let req = new XMLHttpRequest()
+      console.log("Updating tmp/bootstrap/scss/_custom.scss")
+      // console.log("Running npm dist")
+      // console.log("Showing components")
     })
   })
 </script>

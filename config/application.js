@@ -3,6 +3,7 @@
 const express = require('express')
 const app = express()
 const path = require('path')
+const fs = require('fs')
 
 let port = 53011
 let root = path.join(__dirname, '/..')
@@ -43,6 +44,15 @@ app.use('/assets', express.static(root + '/tmp/bootstrap/dist'))
 //
 app.get("/", function(req, res) {
   res.render("editor")
+})
+app.post("/rebuild", function(req, res) {
+  console.log("Rebuilding...")
+  fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', "Hello world!\n", 'utf8')
+  res.render("editor")
+})
+app.get("/download", function(req, res) {
+  console.log("Downloading...")
+  res.sendfile(root + '/tmp/bootstrap/dist/css/bootstrap.min.css');
 })
 
 if (!module.parent) {

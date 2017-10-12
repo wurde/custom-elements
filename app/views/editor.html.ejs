@@ -5,7 +5,7 @@
     <meta name="description" content="A GUI for building Bootstrap themes.">
     <%- include(views + '/shared/head.html.ejs') %>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#quick-nav">
     <main>
 
       <div class="row my-5">
@@ -17,7 +17,7 @@
               </div>
             </div>
 
-            <div class="row" data-spy="scroll" data-target="#quick-nav" data-offset="0">
+            <div class="row">
               <div class="col-12">
                 <%- include(views + '/components/alerts.html.ejs') %>
                 <%- include(views + '/components/badge.html.ejs') %>
@@ -45,71 +45,71 @@
           </div>
         </div>
 
-        <div class="col-2">
+        <div class="col-2 pull-right" style="position:fixed;right:0;">
           <ul id="quick-nav" class="list-group">
-            <li id="alerts" class="list-group-item">
+            <a href="#alerts" class="p-1 list-group-item list-group-item-action">
               Alerts
-            </li>
-            <li id="badge" class="list-group-item">
+            </a>
+            <a href="#badge" class="p-1 list-group-item list-group-item-action">
               Badge
-            </li>
-            <li id="breadcrumb" class="list-group-item">
+            </a>
+            <a href="#breadcrumb" class="p-1 list-group-item list-group-item-action">
               Breadcrumb
-            </li>
-            <li id="buttons" class="list-group-item">
+            </a>
+            <a href="#buttons" class="p-1 list-group-item list-group-item-action">
               Buttons
-            </li>
-            <li id="button-group" class="list-group-item">
+            </a>
+            <a href="#button-group" class="p-1 list-group-item list-group-item-action">
               Button Group
-            </li>
-            <li id="card" class="list-group-item">
+            </a>
+            <a href="#card" class="p-1 list-group-item list-group-item-action">
               Card
-            </li>
-            <li id="carousel" class="list-group-item">
+            </a>
+            <a href="#carousel" class="p-1 list-group-item list-group-item-action">
               Carousel
-            </li>
-            <li id="collapse" class="list-group-item">
+            </a>
+            <a href="#collapse" class="p-1 list-group-item list-group-item-action">
               Collapse
-            </li>
-            <li id="dropdowns" class="list-group-item">
+            </a>
+            <a href="#dropdowns" class="p-1 list-group-item list-group-item-action">
               Dropdowns
-            </li>
-            <li id="forms" class="list-group-item">
+            </a>
+            <a href="#forms" class="p-1 list-group-item list-group-item-action">
               Forms
-            </li>
-            <li id="input-group" class="list-group-item">
+            </a>
+            <a href="#input-group" class="p-1 list-group-item list-group-item-action">
               Input Group
-            </li>
-            <li id="jumbotron" class="list-group-item">
+            </a>
+            <a href="#jumbotron" class="p-1 list-group-item list-group-item-action">
               Jumbotron
-            </li>
-            <li id="list-group" class="list-group-item">
+            </a>
+            <a href="#list-group" class="p-1 list-group-item list-group-item-action">
               List Group
-            </li>
-            <li id="modal" class="list-group-item">
+            </a>
+            <a href="#modal" class="p-1 list-group-item list-group-item-action">
               Modal
-            </li>
-            <li id="Navs" class="list-group-item">
+            </a>
+            <a href="#navs" class="p-1 list-group-item list-group-item-action">
               Navs
-            </li>
-            <li id="navbar" class="list-group-item">
+            </a>
+            <a href="#navbar" class="p-1 list-group-item list-group-item-action">
               Navbar
-            </li>
-            <li id="pagination" class="list-group-item">
+            </a>
+            <a href="#pagination" class="p-1 list-group-item list-group-item-action">
               Pagination
-            </li>
-            <li id="popovers" class="list-group-item">
+            </a>
+            <a href="#popovers" class="p-1 list-group-item list-group-item-action">
               Popovers
-            </li>
-            <li id="progress" class="list-group-item">
+            </a>
+            <a href="#progress" class="p-1 list-group-item list-group-item-action">
               Progress
-            </li>
-            <li id="tables" class="list-group-item">
+            </a>
+            <a href="#tables" class="p-1 list-group-item list-group-item-action">
               Tables
-            </li>
-            <li id="typography" class="list-group-item">
+            </a>
+            <a href="#typography" class="p-1 list-group-item list-group-item-action">
               Typography
-            </li>
+            </a>
           </ul>
         </div>
       </div>

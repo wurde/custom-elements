@@ -11,7 +11,7 @@ let root = path.join(__dirname, '/..')
 //
 // Application variables
 //
-app.locals.title = "ThemeBuilder"
+app.locals.title = "Theme Builder"
 app.locals.root  = root
 app.locals.views = root + '/app/views'
 
@@ -31,7 +31,6 @@ app.set('view engine', 'html.ejs')
 // Middleware
 //
 app.use(require(root + '/lib/middleware/serve_favicon')(app))
-
 //
 // Static assets
 //
@@ -46,14 +45,16 @@ app.get("/", function(req, res) {
   res.render("editor")
 })
 app.post("/update", function(req, res) {
-  console.log("Updating...")
+  console.log("Updating tmp/bootstrap/scss/_custom.scss")
   fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', "Hello world!\n", 'utf8')
+  // console.log("Running npm dist")
   res.render("editor")
 })
 app.get("/download", function(req, res) {
   console.log("Downloading...")
-  res.sendfile(root + '/tmp/bootstrap/dist/css/bootstrap.min.css');
+  // res.sendfile(root + '/tmp/bootstrap/dist/css/bootstrap.min.css');
 })
+app.use(require(root + '/lib/middleware/page_not_found'))
 
 if (!module.parent) {
   app.listen(port, () => {

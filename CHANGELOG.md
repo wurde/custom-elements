@@ -12,11 +12,12 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 3 minor enhancements:
+* 4 minor enhancements:
 
   * Include the 'bootstrap' dependency
   * Add a scrollspy for easier nav
   * Format content for easier viewing
+  * Add favicon
 
 ## YYYY-MM-DD, Version 0.1.0
 

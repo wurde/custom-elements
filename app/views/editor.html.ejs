@@ -3,13 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title><%= title %></title>
-    <meta name="description" content="A GUI for building Bootstrap themes.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-    <script src="/assets/jquery.slim.min.js"></script>
-    <script src="/assets/popper.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css"/>
+    <%- include(views + '/shared/head.html.ejs') %>
   </head>
   <body>
     <main>

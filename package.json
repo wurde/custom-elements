@@ -17,7 +17,6 @@
     "express": "4",
     "electron": "1",
     "ejs": "2",
-    "turbolinks": "5",
     "jquery": "3",
     "popper.js": "1"
   },

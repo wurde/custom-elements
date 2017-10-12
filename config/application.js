@@ -33,7 +33,6 @@ app.use(express.static(root + '/public'))
 app.use('/assets', express.static(root + '/node_modules/jquery/dist'))
 app.use('/assets', express.static(root + '/node_modules/popper.js/dist/umd'))
 app.use('/assets', express.static(root + '/node_modules/bootstrap/dist'))
-app.use('/assets', express.static(root + '/node_modules/turbolinks/dist'))
 
 //
 // Routes

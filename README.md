@@ -5,6 +5,10 @@ This app allows you to instantly see what each SASS directive has on the
 Bootstrap components. You get faster iteration in design and a theme that
 feels cohesive.
 
+## Bootstrap uses SASS
+
+Every Bootstrap download includes a `scss/` directory containing SASS directives.
+
 ## Changelog
 
 Get the project's history in [CHANGELOG.md](CHANGELOG.md).

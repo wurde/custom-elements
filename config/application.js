@@ -30,7 +30,9 @@ app.set('view engine', 'html.ejs')
 //
 // Middleware
 //
+app.use(express.urlencoded({extended: true}))
 app.use(require(root + '/lib/middleware/serve_favicon')(app))
+
 //
 // Static assets
 //
@@ -46,12 +48,13 @@ app.get("/", (req, res) => {
 })
 app.post("/update", (req, res) => {
   console.log("Updating tmp/bootstrap/scss/_custom.scss")
+  console.log(req.body)
   fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', "Hello world!\n", 'utf8')
-  // TODO: console.log("Running npm dist...")
-  res.render("editor")
+  res.sendStatus(200)
 })
 app.get("/download", (req, res) => {
-  res.download(root + '/tmp/bootstrap/dist/css/bootstrap.min.css', (err) => {
+  let css_path = root + '/tmp/bootstrap/dist/css/bootstrap.min.css'
+  res.download(css_path, 'bootstrap.min.css', (err) => {
     if (err) {
       next(err)
     } else {

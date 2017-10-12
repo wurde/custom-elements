@@ -4,7 +4,9 @@
   "description": "A Bootstrap theme builder.",
   "main": "index.js",
   "scripts": {
-    "start": "electron index.js"
+    "start": "electron index.js",
+    "setup": "npm install | npm run clone_bootstrap",
+    "clone_bootstrap": "rm -rf tmp/bootstrap && git clone --quiet https://github.com/twbs/bootstrap tmp/bootstrap"
   },
   "keywords": [
     "desktop",
@@ -17,8 +19,7 @@
     "ejs": "2",
     "turbolinks": "5",
     "jquery": "3",
-    "popper.js": "1",
-    "bootstrap": "4.0.0-beta"
+    "popper.js": "1"
   },
   "author": "Andy Bettisworth <andy@accreu.com>",
   "license": "MIT"

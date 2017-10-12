@@ -51,8 +51,10 @@
               </div>
             </div>
 
-            <div class="row">
+            <div class="row my-5">
               <div class="col-12">
+                <textarea id="editor-textarea" class="form-control" rows="40">
+                </textarea>
               </div>
             </div>
           </div>
@@ -146,15 +148,18 @@
       e.preventDefault()
       console.log("Click edit")
       $('#components').hide()
+      $('#quick-nav').hide()
       $('#edit-link').hide()
       $('#editor').show()
       $('#back-link').show()
+      $('#editor-textarea').focus()
     })
 
     $('#back-link').on('click', (e) => {
       e.preventDefault()
       console.log("Click back")
       $('#components').show()
+      $('#quick-nav').show()
       $('#edit-link').show()
       $('#editor').hide()
       $('#back-link').hide()

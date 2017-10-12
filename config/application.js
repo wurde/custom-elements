@@ -41,16 +41,16 @@ app.use('/assets', express.static(root + '/tmp/bootstrap/dist'))
 //
 // Routes
 //
-app.get("/", function(req, res) {
+app.get("/", (req, res) => {
   res.render("editor")
 })
-app.post("/update", function(req, res) {
+app.post("/update", (req, res) => {
   console.log("Updating tmp/bootstrap/scss/_custom.scss")
   fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', "Hello world!\n", 'utf8')
   // TODO: console.log("Running npm dist...")
   res.render("editor")
 })
-app.get("/download", function(req, res) {
+app.get("/download", (req, res) => {
   res.download(root + '/tmp/bootstrap/dist/css/bootstrap.min.css', (err) => {
     if (err) {
       next(err)

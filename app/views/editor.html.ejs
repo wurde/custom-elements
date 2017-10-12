@@ -13,7 +13,7 @@
           <div id="components" class="container">
             <div class="row">
               <div class="col-12">
-                <h2 class="text-center">Theme Builder<h2>
+                <h2 class="text-center">Theme Preview<h2>
               </div>
             </div>
 
@@ -65,8 +65,12 @@
             <div class="col-12">
               <a href="#" id="edit-link">Edit</a>
               <a href="#" id="back-link" style="display:none;">Back</a>
-              <br/>
-              <a href="#" id="download-link">Download</a>
+              <hr/>
+              <a id="update-btn" href="#" role="button"
+                 class="btn btn-primary"
+                 style="display:none;">Update</a>
+              <a id="download-btn" href="#" role="button"
+                 class="btn btn-primary">Download</a>
             </div>
           </div>
 
@@ -150,8 +154,10 @@
       $('#components').hide()
       $('#quick-nav').hide()
       $('#edit-link').hide()
+      $('#download-btn').hide()
       $('#editor').show()
       $('#back-link').show()
+      $('#update-btn').show()
       $('#editor-textarea').focus()
     })
 
@@ -161,13 +167,22 @@
       $('#components').show()
       $('#quick-nav').show()
       $('#edit-link').show()
+      $('#download-btn').show()
       $('#editor').hide()
       $('#back-link').hide()
+      $('#update-btn').hide()
     })
 
-    $('#download-link').on('click', (e) => {
+    $('#download-btn').on('click', (e) => {
       e.preventDefault()
-      console.log("Click download")
+      console.log("Downloading tmp/bootstrap/dist/bootstrap.min.css")
+    })
+
+    $('#update-btn').on('click', (e) => {
+      e.preventDefault()
+      console.log("Updating tmp/bootstrap/dist/scss/_custom.scss")
+      console.log("Running npm dist")
+      console.log("Showing components")
     })
   })
 </script>

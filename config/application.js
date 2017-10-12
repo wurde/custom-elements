@@ -27,6 +27,11 @@ app.set('views', app.locals.views)
 app.set('view engine', 'html.ejs')
 
 //
+// Middleware
+//
+app.use(require(root + '/lib/middleware/serve_favicon')(app))
+
+//
 // Static assets
 //
 app.use('/assets', express.static(root + '/node_modules/jquery/dist'))

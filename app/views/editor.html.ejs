@@ -10,7 +10,7 @@
 
       <div class="row my-5">
         <div class="col-10">
-          <div class="container">
+          <div id="components" class="container">
             <div class="row">
               <div class="col-12">
                 <h2 class="text-center">Theme Builder<h2>
@@ -43,9 +43,31 @@
               </div>
             </div>
           </div>
+
+          <div id="editor" class="container" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="text-center">Theme Editor<h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="col-2 pull-right" style="position:fixed;right:0;">
+          <div class="row mb-3">
+            <div class="col-12">
+              <a href="#" id="edit-link">Edit</a>
+              <a href="#" id="back-link" style="display:none;">Back</a>
+              <br/>
+              <a href="#" id="download-link">Download</a>
+            </div>
+          </div>
+
           <ul id="quick-nav" class="list-group">
             <a href="#alerts" class="p-1 list-group-item list-group-item-action">
               Alerts
@@ -117,3 +139,30 @@
     </main>
   </body>
 </html>
+
+<script>
+  $(document).ready(() => {
+    $('#edit-link').on('click', (e) => {
+      e.preventDefault()
+      console.log("Click edit")
+      $('#components').hide()
+      $('#edit-link').hide()
+      $('#editor').show()
+      $('#back-link').show()
+    })
+
+    $('#back-link').on('click', (e) => {
+      e.preventDefault()
+      console.log("Click back")
+      $('#components').show()
+      $('#edit-link').show()
+      $('#editor').hide()
+      $('#back-link').hide()
+    })
+
+    $('#download-link').on('click', (e) => {
+      e.preventDefault()
+      console.log("Click download")
+    })
+  })
+</script>

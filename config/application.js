@@ -45,8 +45,8 @@ app.use('/assets', express.static(root + '/tmp/bootstrap/dist'))
 app.get("/", function(req, res) {
   res.render("editor")
 })
-app.post("/rebuild", function(req, res) {
-  console.log("Rebuilding...")
+app.post("/update", function(req, res) {
+  console.log("Updating...")
   fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', "Hello world!\n", 'utf8')
   res.render("editor")
 })

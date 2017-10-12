@@ -47,12 +47,11 @@ app.get("/", function(req, res) {
 app.post("/update", function(req, res) {
   console.log("Updating tmp/bootstrap/scss/_custom.scss")
   fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', "Hello world!\n", 'utf8')
-  // console.log("Running npm dist")
+  // TODO: console.log("Running npm dist...")
   res.render("editor")
 })
 app.get("/download", function(req, res) {
-  console.log("Downloading...")
-  // res.sendfile(root + '/tmp/bootstrap/dist/css/bootstrap.min.css');
+  res.download(root + '/tmp/bootstrap/dist/css/bootstrap.min.css')
 })
 app.use(require(root + '/lib/middleware/page_not_found'))
 

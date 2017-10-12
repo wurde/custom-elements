@@ -12,10 +12,9 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 3 minor enhancements:
+* 2 minor enhancements:
 
   * Include the 'bootstrap' dependency
-  * Include the 'turbolinks' dependency
   * Add a scrollspy for easier nav
 
 ## YYYY-MM-DD, Version 0.1.0

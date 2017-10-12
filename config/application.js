@@ -51,9 +51,20 @@ app.post("/update", function(req, res) {
   res.render("editor")
 })
 app.get("/download", function(req, res) {
-  res.download(root + '/tmp/bootstrap/dist/css/bootstrap.min.css')
+  res.download(root + '/tmp/bootstrap/dist/css/bootstrap.min.css', (err) => {
+    if (err) {
+      next(err)
+    } else {
+      console.log('Sent:', 'bootstrap.min.css')
+    }
+  })
 })
+
+//
+// Error handlers
+//
 app.use(require(root + '/lib/middleware/page_not_found'))
+app.use(require(root + '/lib/middleware/render_error'))
 
 if (!module.parent) {
   app.listen(port, () => {

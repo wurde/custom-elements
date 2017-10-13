@@ -18,7 +18,8 @@
     "electron": "1",
     "ejs": "2",
     "jquery": "3",
-    "popper.js": "1"
+    "popper.js": "1",
+    "formidable": "1"
   },
   "author": "Andy Bettisworth <andy@accreu.com>",
   "license": "MIT"

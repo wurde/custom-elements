@@ -173,20 +173,12 @@
 
     $('#update-btn').on('click', (e) => {
       e.preventDefault()
-      let custom = $('#editor-textarea').val()
-      console.log(custom)
       let req = new XMLHttpRequest()
       let data = new FormData()
-      data.append("custom", custom)
+      data.append("style", $('#editor-textarea').val())
+      console.log(data)
       req.open("POST", "/update")
-      req.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
-      req.onreadystatechange = () => {
-        console.log(req.readyState)
-        console.log(req.status)
-        if(req.readyState === XMLHttpRequest.DONE && req.status === 200) {
-          console.log(req.responseText)
-        }
-      }
+      req.setRequestHeader("Content-Type", "multipart/form-data")
       req.send(data)
     })
   })

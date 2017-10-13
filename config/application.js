@@ -4,6 +4,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const fs = require('fs')
+const formidable = require('formidable')
 
 let port = 53011
 let root = path.join(__dirname, '/..')
@@ -30,7 +31,8 @@ app.set('view engine', 'html.ejs')
 //
 // Middleware
 //
-app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+app.use(express.urlencoded({extended: true, type: "multipart/form-data"}))
 app.use(require(root + '/lib/middleware/serve_favicon')(app))
 
 //
@@ -47,10 +49,13 @@ app.get("/", (req, res) => {
   res.render("editor")
 })
 app.post("/update", (req, res) => {
-  console.log("Updating tmp/bootstrap/scss/_custom.scss")
-  console.log(req.body)
-  fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', "Hello world!\n", 'utf8')
-  res.sendStatus(200)
+  var form = new formidable.IncomingForm()
+  form.parse(req, (err, fields, files) => {
+    console.log(fields)
+    console.log(files)
+    fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', "Hello world!\n", 'utf8')
+    res.sendStatus(200)
+  })
 })
 app.get("/download", (req, res) => {
   let css_path = root + '/tmp/bootstrap/dist/css/bootstrap.min.css'

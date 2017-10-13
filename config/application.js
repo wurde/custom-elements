@@ -41,6 +41,7 @@ app.use(require(root + '/lib/middleware/serve_favicon')(app))
 //
 app.use('/assets', express.static(root + '/node_modules/jquery/dist'))
 app.use('/assets', express.static(root + '/node_modules/popper.js/dist/umd'))
+app.use('/assets', express.static(root + '/node_modules/font-awesome'))
 app.use('/assets', express.static(root + '/tmp/bootstrap/dist'))
 
 //

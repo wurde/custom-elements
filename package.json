@@ -20,7 +20,8 @@
     "ejs": "2",
     "jquery": "3",
     "popper.js": "1",
-    "formidable": "1"
+    "formidable": "1",
+    "font-awesome": "4"
   },
   "author": "Andy Bettisworth <andy@accreu.com>",
   "license": "MIT"

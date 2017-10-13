@@ -69,7 +69,9 @@
                         </button>
                       </div>
                       <div id="error-modal-body" class="modal-body">
-                        Some placeholder
+                        An error occurred during the Bootstrap build process. Be
+                        sure to read the console output for more information.
+                        CTRL+SHIFT+G
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -91,6 +93,8 @@
               <a id="update-btn" href="#" role="button"
                  class="btn btn-primary"
                  style="display:none;">Update</a>
+              <!-- TODO: add animation to warn user to not do anything while
+                   process is active <i class='fa fa-spinner fa-pulse'></i> -->
               <a id="download-btn" href="/download" role="button"
                  class="btn btn-primary">Download</a>
             </div>
@@ -204,7 +208,6 @@
           window.location.reload(true)
         } else {
           console.log(req.responseText)
-          document.getElementById('error-modal-body').textContent = req.responseText
           $("#error-modal").modal('show')
         }
       }

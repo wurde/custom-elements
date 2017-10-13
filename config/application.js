@@ -46,7 +46,8 @@ app.use('/assets', express.static(root + '/tmp/bootstrap/dist'))
 // Routes
 //
 app.get("/", (req, res) => {
-  res.render("editor")
+  let scss = fs.readFileSync(root + '/tmp/bootstrap/scss/_custom.scss', 'utf8')
+  res.render("editor", { custom_scss: scss })
 })
 app.post("/update", (req, res) => {
   var form = new formidable.IncomingForm()
@@ -54,6 +55,7 @@ app.post("/update", (req, res) => {
     if (err) {
       next(err)
     } else {
+      // TODO: handle in callback: run bootstrap build process (maybe use npm task?)
       fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', fields.style, 'utf8')
       res.sendStatus(200)
     }

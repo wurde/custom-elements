@@ -57,7 +57,7 @@ app.post("/update", (req, res, next) => {
     if (err) {
       next(err)
     } else {
-      fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', fields.style, 'utf8')
+      fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', fields.style.toLowerCase(), 'utf8')
       child_process.exec('npm install', { cwd: root + '/tmp/bootstrap' }, (err, stdout, stderr) => {
         if (err) {
           next(err)

@@ -6,6 +6,8 @@ Use Bootstrap's global style variables to compile custom stylesheets. The goal o
 
 Run the following npm tasks to get started:
 
+    git clone https://github.com/wurde/themebuilder
+    cd themebuilder
     npm run setup
     npm start
 

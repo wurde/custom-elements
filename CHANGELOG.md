@@ -12,6 +12,8 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+## 2011-10-13, Version 0.1.0
+
 * 1 major enhancement:
 
   * Add bootstrap build tasks
@@ -22,13 +24,8 @@ Changes are categorized as follows:
   * Add a scrollspy for easier nav
   * Format content for easier viewing
   * Add favicon
+  * Initialized project
 
 * 1 bug fix:
 
   * Ensure EOL for custom scss input
-
-## YYYY-MM-DD, Version 0.1.0
-
-* 1 minor enhancement:
-
-  * Initialized project

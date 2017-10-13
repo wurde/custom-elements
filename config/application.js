@@ -4,6 +4,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const fs = require('fs')
+const os = require('os')
 const formidable = require('formidable')
 const child_process = require('child_process')
 
@@ -59,9 +60,9 @@ app.post("/update", (req, res, next) => {
     } else {
       let custom_scss = fields.style.toLowerCase()
       if (custom_scss.length == 0) {
-        fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', "// Drink the Sea\n", 'utf8')
+        fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', "// Drink the Sea" + os.EOL, 'utf8')
       } else {
-        fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', custom_scss, 'utf8')
+        fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', custom_scss + os.EOL, 'utf8')
       }
       child_process.exec('npm install', { cwd: root + '/tmp/bootstrap' }, (err, stdout, stderr) => {
         if (err) {

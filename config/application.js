@@ -32,7 +32,7 @@ app.set('view engine', 'html.ejs')
 // Middleware
 //
 app.use(express.json())
-app.use(express.urlencoded({extended: true, type: "multipart/form-data"}))
+app.use(express.urlencoded({extended: true}))
 app.use(require(root + '/lib/middleware/serve_favicon')(app))
 
 //
@@ -51,10 +51,12 @@ app.get("/", (req, res) => {
 app.post("/update", (req, res) => {
   var form = new formidable.IncomingForm()
   form.parse(req, (err, fields, files) => {
-    console.log(fields)
-    console.log(files)
-    fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', "Hello world!\n", 'utf8')
-    res.sendStatus(200)
+    if (err) {
+      next(err)
+    } else {
+      fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', fields.style, 'utf8')
+      res.sendStatus(200)
+    }
   })
 })
 app.get("/download", (req, res) => {

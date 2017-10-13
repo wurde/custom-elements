@@ -177,6 +177,13 @@
       let data = new FormData()
       data.append("style", $('#editor-textarea').val())
       req.open("POST", "/update")
+      req.onreadystatechange = () => {
+        if (req.readyState === XMLHttpRequest.DONE && req.status === 200) {
+          window.location.reload(true)
+        } else {
+          dialog(req.responseText)
+        }
+      }
       req.send(data)
     })
   })

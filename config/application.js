@@ -5,6 +5,7 @@ const app = express()
 const path = require('path')
 const fs = require('fs')
 const formidable = require('formidable')
+const child_process = require('child_process')
 
 let port = 53011
 let root = path.join(__dirname, '/..')
@@ -55,8 +56,9 @@ app.post("/update", (req, res) => {
     if (err) {
       next(err)
     } else {
-      // TODO: handle in callback: run bootstrap build process (maybe use npm task?)
       fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', fields.style, 'utf8')
+      child_process.spawn('npm', ['install'], { cwd: root + '/tmp/bootstrap' })
+      child_process.spawn('npm', ['run', 'css-main'], { cwd: root + '/tmp/bootstrap' })
       res.sendStatus(200)
     }
   })

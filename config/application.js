@@ -57,7 +57,12 @@ app.post("/update", (req, res, next) => {
     if (err) {
       next(err)
     } else {
-      fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', fields.style.toLowerCase(), 'utf8')
+      let custom_scss = fields.style.toLowerCase()
+      if (custom_scss.length == 0) {
+        fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', "// Drink the Sea\n", 'utf8')
+      } else {
+        fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', custom_scss, 'utf8')
+      }
       child_process.exec('npm install', { cwd: root + '/tmp/bootstrap' }, (err, stdout, stderr) => {
         if (err) {
           next(err)

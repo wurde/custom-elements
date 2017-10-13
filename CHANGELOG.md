@@ -12,12 +12,20 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+* 1 major enhancement:
+
+  * Add bootstrap build tasks
+
 * 4 minor enhancements:
 
   * Include the 'bootstrap' dependency
   * Add a scrollspy for easier nav
   * Format content for easier viewing
   * Add favicon
+
+* 1 bug fix:
+
+  * Ensure EOL for custom scss input
 
 ## YYYY-MM-DD, Version 0.1.0
 

@@ -7,7 +7,7 @@
     "start": "electron index.js",
     "setup": "npm install | npm run clone_bootstrap && npm run init_custom",
     "clone_bootstrap": "rm -rf tmp/bootstrap && git clone --quiet https://github.com/twbs/bootstrap tmp/bootstrap",
-    "init_custom": "touch tmp/bootstrap/scss/_custom.scss && echo '@import "custom";' >> tmp/bootstrap/scss/bootstrap.scss"
+    "init_custom": "touch tmp/bootstrap/scss/_custom.scss && grep -q -F '@import \"custom\";' tmp/bootstrap/scss/bootstrap.scss || echo '@import \"custom\";' >> tmp/bootstrap/scss/bootstrap.scss"
     },
   "keywords": [
     "desktop",

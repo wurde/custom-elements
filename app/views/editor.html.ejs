@@ -56,6 +56,29 @@
                 <textarea id="editor-textarea" class="form-control" rows="40"><%- custom_scss %></textarea>
               </div>
             </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div id="error-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="error-modal-label" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="error-modal-label">Error occurred:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                        </button>
+                      </div>
+                      <div id="error-modal-body" class="modal-body">
+                        Some placeholder
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -180,7 +203,9 @@
         if (req.readyState === XMLHttpRequest.DONE && req.status === 200) {
           window.location.reload(true)
         } else {
-          dialog(req.responseText)
+          console.log(req.responseText)
+          document.getElementById('error-modal-body').textContent = req.responseText
+          $("#error-modal").modal('show')
         }
       }
       req.send(data)

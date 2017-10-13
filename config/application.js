@@ -50,16 +50,26 @@ app.get("/", (req, res) => {
   let scss = fs.readFileSync(root + '/tmp/bootstrap/scss/_custom.scss', 'utf8')
   res.render("editor", { custom_scss: scss })
 })
-app.post("/update", (req, res) => {
+app.post("/update", (req, res, next) => {
   var form = new formidable.IncomingForm()
   form.parse(req, (err, fields, files) => {
     if (err) {
       next(err)
     } else {
       fs.writeFileSync(root + '/tmp/bootstrap/scss/_custom.scss', fields.style, 'utf8')
-      child_process.spawn('npm', ['install'], { cwd: root + '/tmp/bootstrap' })
-      child_process.spawn('npm', ['run', 'css-main'], { cwd: root + '/tmp/bootstrap' })
-      res.sendStatus(200)
+      child_process.exec('npm install', { cwd: root + '/tmp/bootstrap' }, (err, stdout, stderr) => {
+        if (err) {
+          next(err)
+        } else {
+          child_process.exec('npm run css-main', { cwd: root + '/tmp/bootstrap' }, (err, stdout, stderr) => {
+            if (err) {
+              next(err)
+            } else {
+              res.sendStatus(200)
+            }
+          })
+        }
+      })
     }
   })
 })

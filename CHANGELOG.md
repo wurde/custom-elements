@@ -12,10 +12,11 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 2 minor enhancements:
+* 3 minor enhancements:
 
   * add setup_instructions middleware
   * convert to a global root definition
+  * add mocha deps and init test dir
 
 ## 2011-10-13, Version 0.1.0
 

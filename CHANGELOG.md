@@ -12,6 +12,8 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+## 2011-10-27, Version 0.2.0
+
 * 3 minor enhancements:
 
   * add setup_instructions middleware

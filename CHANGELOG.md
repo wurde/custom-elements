@@ -12,9 +12,10 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 1 minor enhancement:
+* 2 minor enhancements:
 
   * add setup_instructions middleware
+  * convert to a global root definition
 
 ## 2011-10-13, Version 0.1.0
 

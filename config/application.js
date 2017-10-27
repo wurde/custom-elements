@@ -41,6 +41,7 @@ app.set('view engine', 'html.ejs')
  * Middleware
  */
 
+app.use(require(root + '/lib/middleware/setup_instructions'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(require(root + '/lib/middleware/serve_favicon')(app))

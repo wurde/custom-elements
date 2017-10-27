@@ -8,46 +8,56 @@ const os = require('os')
 const formidable = require('formidable')
 const child_process = require('child_process')
 
+/**
+ * Globals
+ */
+
 let port = 53011
 let root = path.join(__dirname, '/..')
 
-//
-// Application variables
-//
+/**
+ * Locals
+ */
+
 app.locals.title = "Theme Builder"
 app.locals.root  = root
 app.locals.views = root + '/app/views'
 
-//
-// Settings
-//
+/**
+ * Settings
+ */
+
 app.disable('x-powered-by')
 
-//
-// View engine: Embedded JavaScript - ejs.co
-//
+/**
+ * View engine: Embedded JavaScript - ejs.co
+ */
+
 app.engine('html.ejs', require('ejs').renderFile);
 app.set('views', app.locals.views)
 app.set('view engine', 'html.ejs')
 
-//
-// Middleware
-//
+/**
+ * Middleware
+ */
+
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(require(root + '/lib/middleware/serve_favicon')(app))
 
-//
-// Static assets
-//
+/**
+ * Static assets
+ */
+
 app.use('/assets', express.static(root + '/node_modules/jquery/dist'))
 app.use('/assets', express.static(root + '/node_modules/popper.js/dist/umd'))
 app.use('/assets', express.static(root + '/node_modules/font-awesome'))
 app.use('/assets', express.static(root + '/tmp/bootstrap/dist'))
 
-//
-// Routes
-//
+/**
+ * Routes
+ */
+
 app.get("/", (req, res) => {
   let scss = fs.readFileSync(root + '/tmp/bootstrap/scss/_custom.scss', 'utf8')
   res.render("editor", { custom_scss: scss })
@@ -91,16 +101,26 @@ app.get("/download", (req, res) => {
   })
 })
 
-//
-// Error handlers
-//
+/**
+ * Error handlers
+ */
+
 app.use(require(root + '/lib/middleware/page_not_found'))
 app.use(require(root + '/lib/middleware/render_error'))
+
+
+/**
+ * Start server
+ */
 
 if (!module.parent) {
   app.listen(port, () => {
     console.log(`Running express.js app on port ${port}`)
   })
 }
+
+/**
+ * Export app
+ */
 
 module.exports = app

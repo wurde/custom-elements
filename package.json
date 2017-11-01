@@ -25,6 +25,9 @@
     "font-awesome": "4",
     "mocha": "3"
   },
+  "engines": {
+    "node": "8"
+  },
   "author": "Andy Bettisworth <andy@accreu.com>",
   "license": "MIT"
 }

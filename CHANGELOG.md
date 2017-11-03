@@ -12,6 +12,10 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+* 1 major enhancement:
+
+  * increase permissiveness on Node versions >=8
+
 ## 2011-10-27, Version 0.2.0
 
 * 3 minor enhancements:

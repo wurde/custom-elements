@@ -10,7 +10,7 @@ let main_window = null
 desktop_app.on('ready', () => {
   let title = "ThemeBuilder"
   let port = 53011
-  let web_app = require(path.join(__dirname, '/config/application.js'))
+  let web_app = require(path.join(__dirname, '/config/app.js'))
   let {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
   let main_window = new BrowserWindow({
     width: width/2,

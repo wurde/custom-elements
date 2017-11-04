@@ -12,7 +12,9 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 3 major enhancements:
+## 2011-11-03, Version 0.3.0
+
+* 4 major enhancements:
 
   * increase permissiveness on Node versions >=8
   * rename application.js to shorter app.js

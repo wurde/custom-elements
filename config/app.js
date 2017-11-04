@@ -49,8 +49,8 @@ app.disable('x-powered-by')
  */
 
 app.engine('html.ejs', ejs.renderFile);
-app.set('views', app.locals.views)
 app.set('view engine', 'html.ejs')
+app.set('views', views)
 
 /**
  * Middleware
@@ -129,7 +129,7 @@ app.use(require(base + '/lib/middleware/render_error'))
  * Start server
  */
 
-if (!module.parent) {
+if (module === require.main) {
   app.listen(port, () => {
     console.log(`Running express.js app on port ${port}`)
   })

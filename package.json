@@ -26,7 +26,7 @@
     "mocha": "3"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">= 8"
   },
   "author": "Andy Bettisworth <andy@accreu.com>",
   "license": "MIT"

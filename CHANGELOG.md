@@ -12,6 +12,10 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+* 1 major enhancement:
+
+  * Convert npm scripts from bash utilities to Node equivalents.
+
 * 2 minor enhancements:
 
   * npm update

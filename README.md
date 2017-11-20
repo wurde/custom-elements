@@ -15,7 +15,7 @@ Run the following npm tasks to get started:
 
 Every Bootstrap download includes both compiled assets and source code. Normally the compiled and minified versions are adequate, but eventually you'll want to differentiate the style of your site. Using the CSS source code, in the `scss/` directory, we can customize the default styles. All of the SASS files located within `.scss/` reference global variables set inside a `scss/_variables.scss` file.
 
-Using the provided global style directives, available in Bootstrap v4.0, we can customize how Bootstrap styles our web sites with only a few lines of code. Every Sass variable in Bootstrap 4 includes the `!default` flag, meaning you can override that default value in your own Sass even after that original variable’s been defined. Copy and paste variables as needed, modify the values, remove the `!default` flag, and recompile.
+Using the provided global style directives, available in Bootstrap v4.0, we can customize how Bootstrap styles our web sites with only a few lines of code. Every SASS variable in Bootstrap 4 includes the `!default` flag, meaning you can override that default value in your own SASS even after that original variable’s been defined. Copy and paste variables as needed, modify the values, remove the `!default` flag, and recompile.
 
 Read more about Bootstrap customization and SASS at:
 

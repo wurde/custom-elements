@@ -12,6 +12,11 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+* 2 minor enhancements:
+
+  * npm update
+  * add test-watch script
+
 ## 2011-11-03, Version 0.3.0
 
 * 4 major enhancements:

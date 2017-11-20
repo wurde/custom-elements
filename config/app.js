@@ -131,7 +131,7 @@ app.use(require(base + '/lib/middleware/render_error'))
 
 if (module === require.main) {
   app.listen(port, () => {
-    console.log(`Running express.js app on port ${port}`)
+    console.log(`Running Express app on port ${port}`)
   })
 }
 

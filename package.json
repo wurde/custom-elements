@@ -6,8 +6,8 @@
   "scripts": {
     "start": "electron index.js",
     "setup": "npm install | npm run clone-bootstrap && npm run init-custom",
-    "clone-bootstrap": "rm -rf tmp/bootstrap && git clone --quiet https://github.com/twbs/bootstrap tmp/bootstrap",
-    "init-custom": "touch tmp/bootstrap/scss/_custom.scss && grep -q -F '@import \"custom\";' tmp/bootstrap/scss/bootstrap.scss || sed -i '0,/^@import/ s/^@import/@import \"custom\";\\n@import/' tmp/bootstrap/scss/bootstrap.scss",
+    "clone-bootstrap": "node ./lib/tasks/git_clone_bootstrap.js",
+    "init-custom": "node ./lib/tasks/init_custom_scss.js",
     "test": "mocha --no-colors",
     "test-watch": "mocha --watch --no-colors"
   },

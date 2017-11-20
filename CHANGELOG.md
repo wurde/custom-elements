@@ -12,6 +12,8 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+## 2011-11-20, Version 1.0.0
+
 * 1 major enhancement:
 
   * Convert npm scripts from bash utilities to Node equivalents.

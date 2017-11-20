@@ -8,7 +8,8 @@
     "setup": "npm install | npm run clone-bootstrap && npm run init-custom",
     "clone-bootstrap": "rm -rf tmp/bootstrap && git clone --quiet https://github.com/twbs/bootstrap tmp/bootstrap",
     "init-custom": "touch tmp/bootstrap/scss/_custom.scss && grep -q -F '@import \"custom\";' tmp/bootstrap/scss/bootstrap.scss || sed -i '0,/^@import/ s/^@import/@import \"custom\";\\n@import/' tmp/bootstrap/scss/bootstrap.scss",
-    "test": "mocha"
+    "test": "mocha --no-colors",
+    "test-watch": "mocha --watch --no-colors"
   },
   "keywords": [
     "desktop",
@@ -16,14 +17,16 @@
     "ui"
   ],
   "dependencies": {
-    "express": "4",
-    "electron": "1",
     "ejs": "2",
-    "jquery": "3",
-    "popper.js": "1",
-    "formidable": "1",
+    "electron": "^1.8.1",
+    "express": "4",
     "font-awesome": "4",
-    "mocha": "3"
+    "formidable": "1",
+    "jquery": "3",
+    "popper.js": "^1.13.0"
+  },
+  "devDependencies": {
+    "mocha": "4"
   },
   "engines": {
     "node": ">= 8"

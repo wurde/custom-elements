@@ -28,7 +28,7 @@ Get the project's history in [CHANGELOG.md](CHANGELOG.md).
 
 ## Maintainer
 
-Andy Bettisworth <andy@accreu.com>
+Andy Bettisworth <andy@accreu.com> https://andybettisworth.com
 
 ## License
 

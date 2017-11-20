@@ -106,7 +106,7 @@ app.post("/update", (req, res, next) => {
     }
   })
 })
-app.get("/download", (req, res) => {
+app.get("/download", (req, res, next) => {
   let css_path = base + '/tmp/bootstrap/dist/css/bootstrap.min.css'
   res.download(css_path, 'bootstrap.min.css', (err) => {
     if (err) {

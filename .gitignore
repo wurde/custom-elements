@@ -20,3 +20,5 @@ node_modules
 .gitsync_lock
 .codesync_lock
 
+.DS_Store
+/release-builds

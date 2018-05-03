@@ -12,9 +12,12 @@
     "test-watch": "mocha --watch --no-colors"
   },
   "keywords": [
-    "desktop",
+    "css",
+    "sass",
+    "bootstrap-styles",
     "bootstrap",
-    "ui"
+    "theme-builders",
+    "electron"
   ],
   "dependencies": {
     "ejs": "2",

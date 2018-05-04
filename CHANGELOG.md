@@ -12,12 +12,13 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 4 minor enhancements:
+* 5 minor enhancements:
 
   * docs: add github paths
   * deps: add debug
   * config: set json spaces 2
   * middleware: nested parsers
+  * middleware: improve error handler
 
 ## 2018-05-03, Version 1.0.4
 

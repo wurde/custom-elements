@@ -12,9 +12,10 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 1 minor enhancements:
+* 2 minor enhancements:
 
   * test: remove
+  * deps: add sqlite3
 
 ## 2011-11-20, Version 1.0.1
 

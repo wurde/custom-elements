@@ -31,5 +31,12 @@
     "node": ">= 8"
   },
   "author": "Andy Bettisworth <andy@accreu.com> https://andybettisworth.com",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wurde/themebuilder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wurde/themebuilder/issues"
+  }
 }

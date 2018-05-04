@@ -12,6 +12,10 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+* 1 minor enhancements:
+
+  * docs: add github paths
+
 ## 2018-05-03, Version 1.0.4
 
 * 1 minor enhancements:

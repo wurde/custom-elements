@@ -12,10 +12,11 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 2 minor enhancements:
+* 3 minor enhancements:
 
   * docs: add github paths
   * deps: add debug
+  * config: set json spaces 2
 
 ## 2018-05-03, Version 1.0.4
 

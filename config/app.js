@@ -49,6 +49,7 @@ app.locals.views = views
 debug("Settings")
 app.set("env", env)
 app.disable("x-powered-by")
+app.set("json spaces", 2)
 
 /**
  * View engine

@@ -12,6 +12,12 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+## 2018-05-03, Version 1.0.4
+
+* 1 minor enhancements:
+
+  * deps: security update for hoek
+
 ## 2018-05-03, Version 1.0.3
 
 * 2 minor enhancements:

@@ -1,6 +1,6 @@
 {
   "name": "themebuilder",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Bootstrap theme builder.",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,8 @@
     "font-awesome": "^4.7.0",
     "formidable": "^1.2.1",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.3",
+    "hoek": "^4.2.1"
   },
   "engines": {
     "node": ">= 8"

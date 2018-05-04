@@ -12,7 +12,7 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 6 minor enhancements:
+* 7 minor enhancements:
 
   * docs: add github paths
   * deps: add debug
@@ -20,6 +20,7 @@ Changes are categorized as follows:
   * middleware: nested parsers
   * middleware: improve error handler
   * deps: add root-model
+  * deps: add schema-migrations
 
 ## 2018-05-03, Version 1.0.4
 

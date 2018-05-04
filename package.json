@@ -7,7 +7,7 @@
     "start": "electron index.js",
     "setup": "npm install | npm run clone-bootstrap && npm run init-custom",
     "clone-bootstrap": "node ./lib/tasks/git_clone_bootstrap.js",
-    "init-custom": "node ./lib/tasks/init_custom_scss.js",
+    "init-custom": "node ./lib/tasks/init_custom_scss.js"
   },
   "keywords": [
     "css",

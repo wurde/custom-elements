@@ -57,7 +57,7 @@ app.set("json spaces", 2)
 
 debug("View engine")
 app.engine("html.ejs", ejs.renderFile);
-app.set("view engine", "html.ejs")
+app.set("view engine", ".html.ejs")
 app.set("views", views)
 
 /**

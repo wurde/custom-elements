@@ -12,18 +12,20 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+## 2018-05-03, Version 1.0.2
+
 * 2 minor enhancements:
 
   * test: remove
   * deps: add sqlite3
 
-## 2011-11-20, Version 1.0.1
+## 2017-11-20, Version 1.0.1
 
 * 1 bug fix:
 
   * Add missing next() input
 
-## 2011-11-20, Version 1.0.0
+## 2017-11-20, Version 1.0.0
 
 * 1 major enhancement:
 
@@ -34,7 +36,7 @@ Changes are categorized as follows:
   * npm update
   * add test-watch script
 
-## 2011-11-03, Version 0.3.0
+## 2017-11-03, Version 0.3.0
 
 * 4 major enhancements:
 
@@ -43,7 +45,7 @@ Changes are categorized as follows:
   * group things better in app.js
   * follow node docs and use `module === require.main`
 
-## 2011-10-27, Version 0.2.0
+## 2017-10-27, Version 0.2.0
 
 * 3 minor enhancements:
 
@@ -51,7 +53,7 @@ Changes are categorized as follows:
   * convert to a global root definition
   * add mocha deps and init test dir
 
-## 2011-10-13, Version 0.1.0
+## 2017-10-13, Version 0.1.0
 
 * 1 major enhancement:
 

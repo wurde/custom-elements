@@ -7,9 +7,7 @@
     "start": "electron index.js",
     "setup": "npm install | npm run clone-bootstrap && npm run init-custom",
     "clone-bootstrap": "node ./lib/tasks/git_clone_bootstrap.js",
-    "init-custom": "node ./lib/tasks/init_custom_scss.js",
-    "test": "mocha --no-colors",
-    "test-watch": "mocha --watch --no-colors"
+    "init-custom": "node ./lib/tasks/init_custom_scss.js"
   },
   "keywords": [
     "css",
@@ -20,16 +18,16 @@
     "electron"
   ],
   "dependencies": {
-    "ejs": "2",
+    "ejs": "^2.5.9",
     "electron": "^1.8.1",
-    "express": "4",
-    "font-awesome": "4",
-    "formidable": "1",
-    "jquery": "3",
-    "popper.js": "^1.13.0"
+    "express": "^4.16.2",
+    "font-awesome": "^4.7.0",
+    "formidable": "^1.2.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
   },
   "devDependencies": {
-    "mocha": "4"
+    "electron-rebuild": "^1.7.3"
   },
   "engines": {
     "node": ">= 8"

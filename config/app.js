@@ -13,7 +13,7 @@ const formidable = require("formidable")
 const child_process = require("child_process")
 
 /**
- * Initialize app
+ * Define app
  */
 
 const app = express()

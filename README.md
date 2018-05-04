@@ -2,12 +2,6 @@
 
 Use Bootstrap's global style variables to compile custom stylesheets. The goal of this app is to speed up design iteration and ensure cohesive design across all of Bootstrap's components.
 
-## Requirements
-
-A compiler is required for getting native SQLite3 to work with Electron.
-
-    sudo apt install build-essential
-
 ## Getting started
 
 Run the following commands to get started:

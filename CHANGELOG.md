@@ -12,6 +12,13 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+## 2018-05-03, Version 1.0.3
+
+* 2 minor enhancements:
+
+  * deps: update electron to 2.0.0
+  * deps: remove sqlite3
+
 ## 2018-05-03, Version 1.0.2
 
 * 2 minor enhancements:

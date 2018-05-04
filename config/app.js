@@ -66,8 +66,8 @@ app.set("views", views)
 
 debug("Mount middleware")
 app.use(require(base + "/lib/middleware/setup_instructions"))
-app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(require(base + "/lib/middleware/parsers/json_body_parser"))
+app.use(require(base + "/lib/middleware/parsers/urlencoded_body_parser"))
 app.use(require(base + "/lib/middleware/serve_favicon"))
 
 /**

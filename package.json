@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "electron index.js",
-    "setup": "npm install | npm run clone-bootstrap && npm run init-custom",
+    "setup": "npm install | npm run clone-bootstrap && npm run init-custom && npm run compile-scss",
     "clone-bootstrap": "node ./lib/tasks/git_clone_bootstrap.js",
     "init-custom": "node ./lib/tasks/init_custom_scss.js",
     "compile-scss": "sass --style=compressed ./tmp/main.scss ./app/assets/css/bootstrap_theme.min.css"

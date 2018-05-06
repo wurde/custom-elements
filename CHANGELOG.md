@@ -12,6 +12,12 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+## 2018-05-06, Version 2.0.1
+
+* 1 bug fix:
+
+  * include css compile in setup
+
 ## 2018-05-06, Version 2.0.0
 
 * 10 minor enhancements:

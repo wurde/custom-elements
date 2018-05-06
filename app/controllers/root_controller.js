@@ -92,9 +92,9 @@ module.exports = (app) => {
      */
 
     static download(req, res) {
-      let css_path = path.join(base, "tmp", "bootstrap", "dist", "css", "bootstrap.min.css")
+      let css_path = path.join(base, "app", "assets", "css", "bootstrap_theme.min.css")
 
-      res.download(css_path, "bootstrap.min.css", (err) => {
+      res.download(css_path, "bootstrap_theme.min.css", (err) => {
         if (err) { next(err) }
       })
     }

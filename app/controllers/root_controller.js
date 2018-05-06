@@ -26,7 +26,7 @@ module.exports = (app) => {
      */
 
     static index(req, res) {
-      let scss = fs.readFileSync(base + "/tmp/bootstrap/scss/_custom.scss", "utf8")
+      let scss = fs.readFileSync(path.join(base, "tmp", "custom.scss"), "utf8")
       res.render("index", { custom_scss: scss })
     }
 
@@ -57,7 +57,7 @@ module.exports = (app) => {
         if (err) { return next(err) }
 
         const bootstrap_path = path.join(base, "tmp", "bootstrap")
-        const scss_path = path.join(base, "tmp", "bootstrap", "scss", "_custom.scss")
+        const scss_path = path.join(base, "tmp", "custom.scss")
         const custom_scss = fields.style.toLowerCase()
 
         if (custom_scss.length == 0) {

@@ -20,7 +20,7 @@ Changes are categorized as follows:
   * middleware: nested parsers
   * middleware: improve error handler
   * deps: add root-model
-  * deps: add schema-migrations
+  * html: improve error page
 
 ## 2018-05-03, Version 1.0.4
 

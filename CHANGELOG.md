@@ -12,7 +12,7 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 7 minor enhancements:
+* 8 minor enhancements:
 
   * docs: add github paths
   * deps: add debug
@@ -21,6 +21,7 @@ Changes are categorized as follows:
   * middleware: improve error handler
   * deps: add root-model
   * html: improve error page
+  * routes: add redirect_to_index
 
 ## 2018-05-03, Version 1.0.4
 

@@ -17,6 +17,18 @@ module.exports = (app) => {
     static index(req, res) {
       res.render("index")
     }
+
+    /**
+     * Redirect to index page.
+     *
+     * @static @method
+     * @since 1.0.4
+     * @public
+     */
+
+    static redirect_to_index(req, res) {
+      res.redirect("/")
+    }
   }
 
   /**

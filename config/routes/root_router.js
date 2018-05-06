@@ -25,6 +25,10 @@ module.exports = (app) => {
   //   let scss = fs.readFileSync(base + "/tmp/bootstrap/scss/_custom.scss", "utf8")
   //   res.render("editor", { custom_scss: scss })
   // })
+
+  router.route("/")
+    .get(RootController.redirect_to_index)
+    .post(RootController.index)
   // app.post("/update", (req, res, next) => {
   //   var form = new formidable.IncomingForm()
   //   form.parse(req, (err, fields, files) => {

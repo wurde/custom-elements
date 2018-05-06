@@ -16,7 +16,10 @@
 # Ignore node dependencies
 node_modules
 
+# Ignore custom css assets
+/app/assets/css/*
+!/app/assets/css/.keep
+
 # Keep gitsync_lock out of version control.
 .gitsync_lock
 .codesync_lock
-

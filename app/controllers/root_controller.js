@@ -61,17 +61,24 @@ module.exports = (app) => {
         const custom_scss = fields.style.toLowerCase()
 
         if (custom_scss.length == 0) {
-          fs.writeFileSync(scss_path, "// Drink the Sea" + os.EOL, "utf8")
+          fs.writeFileSync(scss_path, "// Drink the Sea" + os.EOL, {
+            encoding: "utf8",
+            flag: "w+"
+          })
         } else {
-          fs.writeFileSync(scss_path, custom_scss + os.EOL, "utf8")
+          fs.writeFileSync(scss_path, custom_scss + os.EOL, {
+            encoding: "utf8",
+            flag: "w+"
+          })
+          fs.writeFileSync(scss_path, '@import "bootstrap/scss/bootstrap";' + os.EOL, {
+            encoding: "utf8",
+            flag: "a+"
+          })
         }
 
-        child_process.exec("npm install", { cwd: bootstrap_path }, (err, stdout, stderr) => {
+        child_process.exec("npm run compile-scss", { cwd: base }, (err, stdout, stderr) => {
           if (err) { return next(err) }
-          child_process.exec("npm run css-main", { cwd: bootstrap_path }, (err, stdout, stderr) => {
-            if (err) { return next(err) }
-            res.sendStatus(200)
-          })
+          res.sendStatus(200)
         })
       })
     }

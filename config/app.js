@@ -7,10 +7,6 @@
 const express = require("express")
 const path = require("path")
 const ejs = require("ejs")
-const fs = require("fs")
-const os = require("os")
-const formidable = require("formidable")
-const child_process = require("child_process")
 const debug = require("debug")("app.js")
 
 /**
@@ -26,7 +22,6 @@ const app = express()
 
 debug("Constants")
 const title = "Theme Builder"
-const port = 53011
 const base = path.join(__dirname, "..")
 const env = process.env.NODE_ENV || "development"
 const views = path.join(base, "/app/views")
@@ -37,7 +32,6 @@ const views = path.join(base, "/app/views")
 
 debug("Locals")
 app.locals.title = title
-app.locals.port = port
 app.locals.base = base
 app.locals.env = env
 app.locals.views = views
@@ -95,28 +89,36 @@ debug("Mount error handlers")
 app.use(require(base + "/lib/middleware/errors/page_not_found"))
 app.use(require(base + "/lib/middleware/errors/render_error"))
 
-
 /**
- * Start server
+ * Define server startup.
  */
 
-async function start_server() {
-  /**
-   * Start listening for requests.
-   */
+app.start_server = async (port=53011) => {
+  try {
+    /**
+     * Start listening for requests.
+     */
 
-  const server = app.listen(port, () => {
-    console.log(`Express app listening on port ${port}`)
-  })
+    const server = app.listen(port, () => {
+      console.log(`Express app listening on port ${port}\n`)
+    })
+  } catch(err) {
+    console.error(err)
+    process.exit(1)
+  }
 }
+
+/**
+ * Start server if called as a script.
+ */
 
 if (module === require.main) {
   debug("Start server")
-  start_server()
+  app.start_server()
 }
 
 /**
- * Export app
+ * Export app.
  */
 
 module.exports = app

@@ -7,8 +7,10 @@ module.exports = (app) => {
 
   const base = app.locals.base
   const fs = require("fs")
+  const os = require("os")
   const path = require("path")
   const formidable = require("formidable")
+  const child_process = require("child_process")
 
   /**
    * Define controller
@@ -48,32 +50,29 @@ module.exports = (app) => {
      * @public
      */
 
-    static update(req, res) {
-      var form = new formidable.IncomingForm()
+    static update(req, res, next) {
+      const form = new formidable.IncomingForm()
+
       form.parse(req, (err, fields, files) => {
-        if (err) {
-          next(err)
+        if (err) { return next(err) }
+
+        const bootstrap_path = path.join(base, "tmp", "bootstrap")
+        const scss_path = path.join(base, "tmp", "bootstrap", "scss", "_custom.scss")
+        const custom_scss = fields.style.toLowerCase()
+
+        if (custom_scss.length == 0) {
+          fs.writeFileSync(scss_path, "// Drink the Sea" + os.EOL, "utf8")
         } else {
-          let custom_scss = fields.style.toLowerCase()
-          if (custom_scss.length == 0) {
-            fs.writeFileSync(base + "/tmp/bootstrap/scss/_custom.scss", "// Drink the Sea" + os.EOL, "utf8")
-          } else {
-            fs.writeFileSync(base + "/tmp/bootstrap/scss/_custom.scss", custom_scss + os.EOL, "utf8")
-          }
-          child_process.exec("npm install", { cwd: base + "/tmp/bootstrap" }, (err, stdout, stderr) => {
-            if (err) {
-              next(err)
-            } else {
-              child_process.exec("npm run css-main", { cwd: base + "/tmp/bootstrap" }, (err, stdout, stderr) => {
-                if (err) {
-                  next(err)
-                } else {
-                  res.sendStatus(200)
-                }
-              })
-            }
-          })
+          fs.writeFileSync(scss_path, custom_scss + os.EOL, "utf8")
         }
+
+        child_process.exec("npm install", { cwd: bootstrap_path }, (err, stdout, stderr) => {
+          if (err) { return next(err) }
+          child_process.exec("npm run css-main", { cwd: bootstrap_path }, (err, stdout, stderr) => {
+            if (err) { return next(err) }
+            res.sendStatus(200)
+          })
+        })
       })
     }
 

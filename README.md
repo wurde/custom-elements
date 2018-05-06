@@ -2,6 +2,12 @@
 
 Use Bootstrap's global style variables to compile custom stylesheets. The goal of this app is to speed up design iteration and ensure cohesive design across all of Bootstrap's components.
 
+## Requirements
+
+The `sass` command-line application is required:
+
+    sudo npm install -g sass
+
 ## Getting started
 
 Run the following commands to get started:

@@ -71,7 +71,7 @@
                       <div id="error-modal-body" class="modal-body">
                         An error occurred during the Bootstrap build process. Be
                         sure to read the console output for more information.
-                        CTRL+SHIFT+G
+                        CTRL+SHIFT+I
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -198,11 +198,16 @@
       e.preventDefault()
       let req = new XMLHttpRequest()
       let data = new FormData()
+
       document.getElementById("update-btn").innerHTML = "<i class='fa fa-spinner fa-pulse'></i>"
+
       data.append("style", $('#editor-textarea').val())
+
       req.open("POST", "/update")
+
       req.onreadystatechange = () => {
         document.getElementById("update-btn").innerHTML = "Update"
+
         if (req.readyState === XMLHttpRequest.DONE && req.status === 200) {
           window.location.reload(true)
         } else {

@@ -12,7 +12,9 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-* 9 minor enhancements:
+## 2018-05-06, Version 2.0.0
+
+* 10 minor enhancements:
 
   * docs: add github paths
   * deps: add debug
@@ -23,6 +25,7 @@ Changes are categorized as follows:
   * html: improve error page
   * routes: add redirect_to_index
   * docs: sass is required
+  * js: compile scss with custom variables
 
 ## 2018-05-03, Version 1.0.4
 

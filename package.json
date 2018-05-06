@@ -1,6 +1,6 @@
 {
   "name": "themebuilder",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "A Bootstrap theme builder.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "setup": "npm install | npm run clone-bootstrap && npm run init-custom",
     "clone-bootstrap": "node ./lib/tasks/git_clone_bootstrap.js",
     "init-custom": "node ./lib/tasks/init_custom_scss.js",
-    "compile-scss": "sass --style=compressed ./tmp/custom.scss ./app/assets/css/bootstrap_theme.min.css"
+    "compile-scss": "sass --style=compressed ./tmp/main.scss ./app/assets/css/bootstrap_theme.min.css"
   },
   "keywords": [
     "css",

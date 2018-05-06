@@ -70,10 +70,6 @@ module.exports = (app) => {
             encoding: "utf8",
             flag: "w+"
           })
-          fs.writeFileSync(scss_path, '@import "bootstrap/scss/bootstrap";' + os.EOL, {
-            encoding: "utf8",
-            flag: "a+"
-          })
         }
 
         child_process.exec("npm run compile-scss", { cwd: base }, (err, stdout, stderr) => {

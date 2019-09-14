@@ -9,3 +9,7 @@ A good web design is consistent across components. This isn't easy as there are 
 ## Prototyping
 
 Speed of iteration is a hallmark of a quality designer and the tooling should be built accordingly. Make design iterations fast. Give designers everything they need to take an idea and implement it. Make preview renders real-time.
+
+## Samples
+
+Add free and premium themes. These design assets serve as a litmus test that we've created a minimum viable product. It also provides a path to earning funds to invest back into development.

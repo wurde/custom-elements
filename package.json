@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/wurde/themebuilder/issues"
   },
-  "homepage": "https://github.com/wurde/themebuilder#readme"
+  "homepage": "https://github.com/wurde/themebuilder#readme",
+  "devDependencies": {
+    "rimraf": "^3.0.0"
+  }
 }

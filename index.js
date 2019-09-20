@@ -4,6 +4,8 @@
  * Dependencies
  */
 
+const url = require('url')
+const path = require('path')
 const electron = require('electron')
 
 /**
@@ -36,7 +38,12 @@ function create_window() {
     }
   })
 
-  main_window.loadURL(`file://${__dirname}/../client/dist/index.html`)
+  const index_path = url.format({
+    pathname: path.join(__dirname, 'client/build/index.html'),
+    protocol: 'file'
+  })
+
+  main_window.loadURL(index_path)
 }
 
 /**

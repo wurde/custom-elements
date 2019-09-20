@@ -1,23 +1,12 @@
 {
   "name": "themebuilder",
   "version": "2.0.1",
-  "description": "A Bootstrap theme builder.",
+  "description": "Customize all design aspects of your React components.",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "start": "electron index.js",
-    "setup": "npm install | npm run clone-bootstrap && npm run init-custom && npm run compile-scss",
-    "clone-bootstrap": "node ./lib/tasks/git_clone_bootstrap.js",
-    "init-custom": "node ./lib/tasks/init_custom_scss.js",
-    "compile-scss": "sass --style=compressed ./tmp/main.scss ./app/assets/css/bootstrap_theme.min.css"
+    "start": "electron index.js"
   },
-  "keywords": [
-    "css",
-    "sass",
-    "bootstrap-styles",
-    "bootstrap",
-    "theme-builders",
-    "electron"
-  ],
   "dependencies": {
     "debug": "^3.1.0",
     "ejs": "^2.5.9",
@@ -33,7 +22,7 @@
   "engines": {
     "node": ">= 8"
   },
-  "author": "Andy Bettisworth <andy@accreu.com> https://andybettisworth.com",
+  "author": "Andy Bettisworth",
   "license": "MIT",
   "repository": {
     "type": "git",

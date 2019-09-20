@@ -10,7 +10,7 @@
   "dependencies": {
     "debug": "^3.1.0",
     "ejs": "^2.5.9",
-    "electron": "^2.0.0",
+    "electron": "^6.0.10",
     "express": "^4.16.2",
     "font-awesome": "^4.7.0",
     "formidable": "^1.2.1",

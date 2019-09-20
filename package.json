@@ -5,7 +5,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "electron index.js"
+    "start": "electron index.js",
+    "prebuild": "rimraf client/build",
+    "build": "npm run build --prefix client"
   },
   "dependencies": {
     "electron": "^6.0.10"

@@ -12,4 +12,4 @@ Good designers value fast iterations. Any design tool seeking the attention of t
 
 ## Samples
 
-Reusable artifacts help bootstrap the design process. Give designers a base to build on top of. Use these design assets as the proving grounds for an minimum viable product. Provide free and premium themes with intent to reinvest funds into development.
+Reusable artifacts help bootstrap the design process. They give designers a base to build on top of. Use these design assets as the proving grounds for an minimum viable product. Provide free and premium themes with intent to reinvest funds into development.

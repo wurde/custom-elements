@@ -8,7 +8,7 @@ A good web design is consistent across components. This isn't easy as there are 
 
 ## Prototyping
 
-Speed of iteration is a hallmark of a quality designer and the tooling should be built accordingly. Make design iterations fast. Give designers everything they need to take an idea and implement it. Make preview renders real-time.
+Good designers value fast iterations. Any design tool seeking the attention of these designers must act as an accelerator. They should observe productivity gains and not time sinks. Know where in the production cycle your tool fits from idea to implementation.
 
 ## Samples
 

@@ -4,7 +4,7 @@ _*Developing and communicating a long-term vision both justifies the work and gu
 
 ## Consistency
 
-A good web design is consistent across components. This isn't easy as there are many components and edge cases to consider. To enable this consistency designers need insights and guardrails on style changes.
+The beauty behind symmetry is in it's consistency. A good web design is consistent across components. This isn't easy with many components and edge cases to consider. Empower designers with relevant insights and guardrails.
 
 ## Prototyping
 

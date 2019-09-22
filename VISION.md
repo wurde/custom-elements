@@ -12,4 +12,4 @@ Good designers value fast iterations. Any design tool seeking the attention of t
 
 ## Samples
 
-Add free and premium themes. These design assets serve as a litmus test that we've created a minimum viable product. It also provides a path to earning funds to invest back into development.
+Reusable artifacts help bootstrap the design process. Give designers a base to build on top of. Use these design assets as the proving grounds for an minimum viable product. Provide free and premium themes with intent to reinvest funds into development.

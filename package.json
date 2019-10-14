@@ -1,39 +1,19 @@
 {
   "name": "themebuilder",
   "version": "2.0.1",
-  "description": "A Bootstrap theme builder.",
+  "description": "Customize all design aspects of your React components.",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "start": "electron index.js",
-    "setup": "npm install | npm run clone-bootstrap && npm run init-custom && npm run compile-scss",
-    "clone-bootstrap": "node ./lib/tasks/git_clone_bootstrap.js",
-    "init-custom": "node ./lib/tasks/init_custom_scss.js",
-    "compile-scss": "sass --style=compressed ./tmp/main.scss ./app/assets/css/bootstrap_theme.min.css"
+    "start": "cross-env NODE_ENV=development concurrently --kill-others npm:start:client npm:start:electron",
+    "start:client": "npm run start --prefix client",
+    "start:electron": "wait-on http://localhost:3000 && electron index.js --no-sandbox",
+    "prebuild": "rimraf client/build",
+    "build": "npm run build --prefix client",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
-  "keywords": [
-    "css",
-    "sass",
-    "bootstrap-styles",
-    "bootstrap",
-    "theme-builders",
-    "electron"
-  ],
-  "dependencies": {
-    "debug": "^3.1.0",
-    "ejs": "^2.5.9",
-    "electron": "^2.0.0",
-    "express": "^4.16.2",
-    "font-awesome": "^4.7.0",
-    "formidable": "^1.2.1",
-    "hoek": "^4.2.1",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.3",
-    "root-model": "^1.0.0"
-  },
-  "engines": {
-    "node": ">= 8"
-  },
-  "author": "Andy Bettisworth <andy@accreu.com> https://andybettisworth.com",
+  "author": "Andy Bettisworth",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -41,5 +21,19 @@
   },
   "bugs": {
     "url": "https://github.com/wurde/themebuilder/issues"
+  },
+  "homepage": "https://github.com/wurde/themebuilder#readme",
+  "build": {
+    "appId": "com.wurde.themebuilder",
+    "productName": "Theme Builder",
+    "target": "snap"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "cross-env": "^6.0.3",
+    "electron": "^6.0.10",
+    "electron-builder": "^21.2.0",
+    "rimraf": "^3.0.0",
+    "wait-on": "^3.3.0"
   }
 }

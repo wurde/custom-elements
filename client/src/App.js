@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import { Heading } from '@wurde/components';
 
 /**
  * Define component
@@ -12,7 +13,7 @@ function App() {
   return (
     <div>
       <header>
-        Theme Builder
+        <Heading type="h1">Theme Builder</Heading>
       </header>
     </div>
   );

@@ -9,9 +9,6 @@
     "prebuild": "rimraf client/build",
     "build": "npm run build --prefix client"
   },
-  "dependencies": {
-    "electron": "^6.0.10"
-  },
   "author": "Andy Bettisworth",
   "license": "MIT",
   "repository": {
@@ -23,6 +20,7 @@
   },
   "homepage": "https://github.com/wurde/themebuilder#readme",
   "devDependencies": {
+    "electron": "^6.0.10",
     "rimraf": "^3.0.0"
   }
 }

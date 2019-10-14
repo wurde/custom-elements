@@ -7,7 +7,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development concurrently --kill-others npm:start:client npm:start:electron",
     "start:client": "npm run start --prefix client",
-    "start:electron": "wait-on http://localhost:3000 && electron index.js",
+    "start:electron": "wait-on http://localhost:3000 && electron index.js --no-sandbox",
     "prebuild": "rimraf client/build",
     "build": "npm run build --prefix client",
     "pack": "electron-builder --dir",

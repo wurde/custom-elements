@@ -24,3 +24,9 @@ coverage
 
 # Prevent gitsync conflicts
 .gitsync_lock
+
+# Ignore VS Code configuration
+.vscode
+
+# Ignore distribution files
+dist

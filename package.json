@@ -11,7 +11,8 @@
     "prebuild": "rimraf client/build",
     "build": "npm run build --prefix client",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "cypress": "./node_modules/.bin/cypress open"
   },
   "author": "Andy Bettisworth",
   "license": "MIT",

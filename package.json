@@ -31,6 +31,7 @@
   "devDependencies": {
     "concurrently": "^5.0.0",
     "cross-env": "^6.0.3",
+    "cypress": "^3.4.1",
     "electron": "^6.0.10",
     "electron-builder": "^21.2.0",
     "rimraf": "^3.0.0",

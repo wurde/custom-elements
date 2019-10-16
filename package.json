@@ -12,7 +12,8 @@
     "build": "npm run build --prefix client",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "cypress": "./node_modules/.bin/cypress open"
+    "cypress": "./node_modules/.bin/cypress open",
+    "test": "./node_modules/.bin/cypress run"
   },
   "author": "Andy Bettisworth",
   "license": "MIT",

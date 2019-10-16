@@ -30,3 +30,7 @@ coverage
 
 # Ignore distribution files
 dist
+
+# Ignore Cypress files
+/cypress/screenshots
+/cypress/videos

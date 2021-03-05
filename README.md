@@ -1,11 +1,12 @@
-# Theme Builder [UNDER CONSTRUCTION]
+# Custom Elements
 
-Customize all design aspects of your React components.
+A set of components for agile frontend development.
 
-## Vision
+## Components
 
-There is a vision that guides development. Learn more in [VISION.md](VISION.md).
+- [TODO](./README.md)
 
 ## License
 
-This project is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+This project is __FREE__ to use, reuse, remix, and resell.
+This is made possible by the [MIT license](/LICENSE).

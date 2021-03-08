@@ -2,7 +2,7 @@
   "version": 2,
   "tags": [
     {
-      "name": "frontend-components",
+      "name": "custom-components",
       "description": "A component with a title and an action counter",
       "properties": [
         {
@@ -22,7 +22,7 @@
       "slots": [],
       "cssProperties": [
         {
-          "name": "--frontend-components-text-color",
+          "name": "--custom-components-text-color",
           "description": "Main Text Color",
           "type": "Color"
         }

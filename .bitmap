@@ -11,159 +11,81 @@
 {
     "apps/comic": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "wurde.comic/apps/comic",
-        "config": {
-            "wurde.comic/envs/main-react-env": {},
-            "teambit.envs/envs": {
-                "env": "wurde.comic/envs/main-react-env"
-            }
-        }
+        "rootDir": "wurde.comic/apps/comic"
     },
     "envs/main-react-env": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "wurde.comic/envs/main-react-env",
-        "config": {
-            "teambit.envs/env": {},
-            "teambit.envs/envs": {
-                "env": "teambit.envs/env"
-            }
-        }
+        "rootDir": "wurde.comic/envs/main-react-env"
     },
     "pages/viewer": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "wurde.comic/pages/viewer",
-        "config": {
-            "wurde.comic/envs/main-react-env": {},
-            "teambit.envs/envs": {
-                "env": "wurde.comic/envs/main-react-env"
-            }
-        }
+        "rootDir": "wurde.comic/pages/viewer"
     },
     "style/tokens/breakpoints": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "wurde.comic/style/tokens/breakpoints",
-        "config": {
-            "teambit.harmony/node": {},
-            "teambit.envs/envs": {
-                "env": "teambit.harmony/node"
-            }
-        }
+        "rootDir": "wurde.comic/style/tokens/breakpoints"
     },
     "style/tokens/colors": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "wurde.comic/style/tokens/colors",
-        "config": {
-            "teambit.harmony/node": {},
-            "teambit.envs/envs": {
-                "env": "teambit.harmony/node"
-            }
-        }
+        "rootDir": "wurde.comic/style/tokens/colors"
     },
     "style/tokens/font-family": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "wurde.comic/style/tokens/font-family",
-        "config": {
-            "teambit.harmony/node": {},
-            "teambit.envs/envs": {
-                "env": "teambit.harmony/node"
-            }
-        }
+        "rootDir": "wurde.comic/style/tokens/font-family"
     },
     "style/tokens/spacing": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "wurde.comic/style/tokens/spacing",
-        "config": {
-            "teambit.harmony/node": {},
-            "teambit.envs/envs": {
-                "env": "teambit.harmony/node"
-            }
-        }
+        "rootDir": "wurde.comic/style/tokens/spacing"
     },
     "ui/forms/button": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "wurde.comic/ui/forms/button",
-        "config": {
-            "wurde.comic/envs/main-react-env": {},
-            "teambit.envs/envs": {
-                "env": "wurde.comic/envs/main-react-env"
-            }
-        }
+        "rootDir": "wurde.comic/ui/forms/button"
     },
     "ui/hooks/use-comic": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "wurde.comic/ui/hooks/use-comic",
-        "config": {
-            "wurde.comic/envs/main-react-env": {},
-            "teambit.envs/envs": {
-                "env": "wurde.comic/envs/main-react-env"
-            }
-        }
+        "rootDir": "wurde.comic/ui/hooks/use-comic"
     },
     "ui/layout/card": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "wurde.comic/ui/layout/card",
-        "config": {
-            "wurde.comic/envs/main-react-env": {},
-            "teambit.envs/envs": {
-                "env": "wurde.comic/envs/main-react-env"
-            }
-        }
+        "rootDir": "wurde.comic/ui/layout/card"
     },
     "ui/media/image": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "wurde.comic/ui/media/image",
-        "config": {
-            "wurde.comic/envs/main-react-env": {},
-            "teambit.envs/envs": {
-                "env": "wurde.comic/envs/main-react-env"
-            }
-        }
+        "rootDir": "wurde.comic/ui/media/image"
     },
     "ui/typography/heading": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "wurde.comic/ui/typography/heading",
-        "config": {
-            "wurde.comic/envs/main-react-env": {},
-            "teambit.envs/envs": {
-                "env": "wurde.comic/envs/main-react-env"
-            }
-        }
+        "rootDir": "wurde.comic/ui/typography/heading"
     },
     "ui/typography/text": {
         "scope": "",
-        "version": "",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "wurde.comic/ui/typography/text",
-        "config": {
-            "wurde.comic/envs/main-react-env": {},
-            "teambit.envs/envs": {
-                "env": "wurde.comic/envs/main-react-env"
-            }
-        }
+        "rootDir": "wurde.comic/ui/typography/text"
     },
     "$schema-version": "14.9.0"
 }

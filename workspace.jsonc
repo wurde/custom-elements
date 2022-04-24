@@ -1,0 +1,84 @@
+/**
+ * This is the main configuration file of your bit workspace.
+ * for full documentation, please see: https://bit.dev/docs/workspace/workspace-configuration
+ **/{
+  "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
+  /**
+   * Add the app to your workspace config.
+   **/
+  "wurde.comic/apps/comic": {},
+  /**
+   * main configuration of the Bit workspace. (required)
+   **/
+  "teambit.workspace/workspace": {
+    /**
+     * the name of the component workspace. used for development purposes.
+     **/
+    "name": "custom-elements",
+    /**
+     * set the icon to be shown on the Bit server.
+     **/
+    "icon": "https://static.bit.dev/bit-logo.svg",
+    /**
+     * default directory to place a component during `bit import` and `bit create`.
+     * the following placeholders are available:
+     * name - component name includes namespace, e.g. 'ui/button'.
+     * scopeId - full scope-id includes the owner, e.g. 'teambit.compilation'.
+     * scope - scope name only, e.g. 'compilation'.
+     * owner - owner name in bit.dev, e.g. 'teambit'.
+     **/
+    "defaultDirectory": "{owner}.{scope}/{name}",
+    /**
+     * default scope for all components in workspace.
+     **/
+    "defaultScope": "wurde.comic"
+  },
+  /**
+   * main configuration for component dependency resolution. (required)
+   **/
+  "teambit.dependencies/dependency-resolver": {
+    /**
+     * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
+     */
+    "packageManager": "teambit.dependencies/pnpm",
+    "policy": {
+      "dependencies": {
+        "@bit-foundations/styling.tailwind.webpack-transformer": "0.0.6",
+        "@teambit/eslint-config-bit-react": "~0.0.367",
+        "@teambit/react": "0.0.714",
+        "@typescript-eslint/eslint-plugin": "4.29.3",
+        "eslint-import-resolver-node": "0.3.6",
+        "eslint-plugin-import": "2.26.0",
+        "eslint-plugin-jest": "24.4.0",
+        "eslint-plugin-jsx-a11y": "6.5.1",
+        "eslint-plugin-mdx": "1.17.0",
+        "eslint-plugin-react": "7.29.4",
+        "postcss-loader": "6.2.1"
+      },
+      "peerDependencies": {
+        "@testing-library/jest-dom": "5.16.4",
+        "@testing-library/react": "12.0.0",
+        "@testing-library/react-hooks": "7.0.2",
+        "@testing-library/user-event": "14.0.4",
+        "@types/jest": "27.4.1",
+        "autoprefixer": "10.4.4",
+        "postcss": "8.4.12",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "tailwindcss": "3.0.23"
+      }
+    }
+  },
+  /**
+   * workspace variants allow to set different subsets of configuration for components in your
+   * workspace. this is extremely useful for upgrading, aligning and building components with a new
+   * set of dependencies. a rule can be a directory or a component-id/namespace, in which case,
+   * wrap the rule with curly brackets (e.g. `"{ui/*}": {}`)
+   * see https://bit.dev/docs/workspace/variants for more info.
+   **/
+  "teambit.workspace/variants": {
+    "{apps/**}, {pages/**}, {ui/**}": {
+      "wurde.comic/envs/main-react-env": {}
+    }
+  }
+}

@@ -1,0 +1,20 @@
+---
+description: 'A React Hook that fetches an xkdc comic.'
+labels: ['hook', 'counter']
+---
+
+import { useComic } from './use-comic';
+
+## Component usage
+
+In this example clicking the button calls `increment` which increments the `count` by 1
+
+```js
+import { useComic } from './use-comic';
+
+const [comicId, setComicId] = useState(1);
+const { comic, isLoading, error } = useComic(comicId);
+
+<Heading variant="h3">{comic.title}</Heading>
+<Image src={comic.img} alt={comic.alt} />
+```
